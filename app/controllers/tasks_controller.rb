@@ -3,7 +3,6 @@ class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
 
   def index
-    # binding.pry
     @tasks = current_user.tasks.order(created_at: :desc)
   end
 
